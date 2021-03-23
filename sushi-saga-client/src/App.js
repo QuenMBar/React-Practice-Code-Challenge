@@ -48,9 +48,7 @@ class App extends Component {
         emptyPlates: [...this.state.emptyPlates, item],
         wallet: this.state.wallet - item.price,
       });
-    } else {
-      console.log("you fucked up");
-    }
+    } 
   }
 
   render() {
