@@ -33,7 +33,7 @@ class App extends Component {
 
   eatMe = (id) => {
     let newId = (id - 1) % 4;
-    if(!this.state.fourSushi[newId].isEaten && this.state.wallet > 0){
+    if(!this.state.fourSushi[newId].isEaten && this.state.wallet >= this.state.fourSushi[newId].price){
       // 1. Make a shallow copy of the items
       let fourSushi = [...this.state.fourSushi];
       // 2. Make a shallow copy of the item you want to mutate
